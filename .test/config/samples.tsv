@@ -1,3 +1,11 @@
-sample	condition	replicate	read1	read2
-sample1	wild_type	1	sample1.bwa.read1.fastq.gz	sample1.bwa.read2.fastq.gz
-sample2	wild_type	2	sample2.bwa.read1.fastq.gz	sample2.bwa.read2.fastq.gz
+sample  path
+CombFold/example/pdbs/AFM_A0_A0_A0_unrelaxed_rank_1_model_3.pdb
+CombFold/example/pdbs/AFM_A0_A0_A0_unrelaxed_rank_2_model_1.pdb
+CombFold/example/pdbs/AFM_A0_A0_G0_unrelaxed_rank_1_model_1.pdb
+CombFold/example/pdbs/AFM_A0_A0_G0_unrelaxed_rank_2_model_3.pdb
+CombFold/example/pdbs/AFM_A0_A0_unrelaxed_rank_1_model_1.pdb
+CombFold/example/pdbs/AFM_A0_A0_unrelaxed_rank_2_model_4.pdb
+CombFold/example/pdbs/AFM_A0_G0_unrelaxed_rank_1_model_2.pdb
+CombFold/example/pdbs/AFM_A0_G0_unrelaxed_rank_2_model_3.pdb
+CombFold/example/pdbs/AFM_G0_G0_unrelaxed_rank_1_model_4.pdb
+CombFold/example/pdbs/AFM_G0_G0_unrelaxed_rank_2_model_5.pdb

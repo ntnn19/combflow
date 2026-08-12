@@ -12,7 +12,8 @@ configfile: "config/config.yaml"
 # load rules
 # -----------------------------------------------------
 include: "rules/common.smk"
-include: "rules/process_reads.smk"
+include: "rules/run_combfold_assembly.smk"
+include: "rules/multiqc.smk"
 
 
 # optional messages, log and error handling
@@ -34,4 +35,4 @@ onerror:
 rule all:
     default_target: True
     input:
-        "results/multiqc/multiqc_report.html",
+        "results/rule_MULTIQC/multiqc_report.html",
