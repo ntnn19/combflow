@@ -17,7 +17,7 @@ include: "rules/prepare_subunits_json.smk"
 include: "rules/multiqc.smk"
 
 # constants
-WORKFLOW_DIR = os.path.dirname(os.path.abspath(workflow.snakefile))
+#WORKFLOW_DIR = os.path.dirname(os.path.abspath(workflow.snakefile))
 # -----------------------------------------------------
 
 
