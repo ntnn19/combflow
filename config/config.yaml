@@ -1,5 +1,5 @@
-fasta: "/scratch1/home/nnagar/repos/CombFold/example/example.fasta"
+fasta: "example.fasta"
 output_dir: "results"
-pdb_dir: "/scratch1/home/nnagar/repos/CombFold/example/pdbs"
+pdb_dir: "pdb"
 combfold_container: "docker://ntnn19/combfold"
-stoichiometry: "NS1:1-6,NS2A:1-4"
+stoichiometry: "NS1:1-2,NS2A:1-2"

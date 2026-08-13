@@ -2,10 +2,12 @@ checkpoint PREPARE_SUBUNITS_JSON:
     input:
         FASTA 
     output:
-        directory(os.path.join(OUTDIR,"PREPARE_SUBUNITS_JSON"))
+        directory(os.path.join(OUTDIR,"rule_PREPARE_SUBUNITS_JSON"))
     params:
         s=STOICHIOMETRY,
         extra_flags=config.get("extra_prepare_subunits_json_flags", "")
+    conda:
+        "../envs/prepare_subunits_json.yaml"
     shell:
         """
         python {WORKFLOW_DIR}/scripts/prepare_subunits_json.py -f {input} -o {output} -s {params.s} \

@@ -1,6 +1,6 @@
 rule RUN_COMBFOLD_ASSEMBLY:
     input:
-        subunits_json = os.path.join(OUTDIR,"rule_PREPARE_SUBNITS_JSON","{comb}.json"),
+        subunits_json = os.path.join(OUTDIR,"rule_PREPARE_SUBUNITS_JSON","{comb}.json"),
         pdbs = PDB_DIR
     output:
         os.path.join(OUTDIR,"rule_RUN_COMBFOLD_ASSEMBLY","{comb}","assembled_results","confidence.txt")
