@@ -7,7 +7,7 @@ rule RUN_COMBFOLD_ASSEMBLY:
     container:
         COMBFOLD_CONTAINER
     params:
-        patched_script = workflow.source_path("../scripts/run_on_pdbs.py")
+        patched_script = workflow.source_path("../scripts/run_on_pdbs.py"),
         output_dir = os.path.join(OUTDIR,"rule_RUN_COMBFOLD_ASSEMBLY")
     shell:
         """
