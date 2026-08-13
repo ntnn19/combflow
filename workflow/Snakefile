@@ -16,8 +16,9 @@ include: "rules/run_combfold_assembly.smk"
 include: "rules/prepare_subunits_json.smk"
 include: "rules/multiqc.smk"
 
-# constants
-#WORKFLOW_DIR = os.path.dirname(os.path.abspath(workflow.snakefile))
+# local rules
+localrules: PREPARE_SUBUNITS_JSON
+    
 # -----------------------------------------------------
 
 
