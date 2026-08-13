@@ -7,12 +7,11 @@ rule RUN_COMBFOLD_ASSEMBLY:
     container:
         COMBFOLD_CONTAINER
     params:
-        patched_script = workflow.source_path("../scripts/run_on_pdbs.py"),
         output_dir = os.path.join(OUTDIR,"rule_RUN_COMBFOLD_ASSEMBLY")
     shell:
         """
         rm -rf {params.output_dir}/{wildcards.comb}
-        python {params.patched_script} \
+        python /app/CombFold-master/scripts/run_on_pdbs.py \
         {input.subunits_json} \
         {input.pdbs} \
         {params.output_dir}/{wildcards.comb}
