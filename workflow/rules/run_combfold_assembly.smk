@@ -7,12 +7,13 @@ rule RUN_COMBFOLD_ASSEMBLY:
     container:
         COMBFOLD_CONTAINER
     params:
-        output_dir = os.path.join(OUTDIR,"rule_RUN_COMBFOLD_ASSEMBLY")
+        output_dir = os.path.join(OUTDIR, "rule_RUN_COMBFOLD_ASSEMBLY"),
+        tmp_dir = lambda wc: os.path.join(OUTDIR, "rule_RUN_COMBFOLD_ASSEMBLY", f".{wc.comb}.tmp")
     shell:
         """
-        rm -rf {params.output_dir}/{wildcards.comb}
+        rm -rf {params.tmp_dir}
         python /app/CombFold-master/scripts/run_on_pdbs.py \
-        {input.subunits_json} \
-        {input.pdbs} \
-        {params.output_dir}/{wildcards.comb}
+            {input.subunits_json} {input.pdbs} {params.tmp_dir} && \
+        rm -rf {params.output_dir}/{wildcards.comb} && \
+        mv {params.tmp_dir} {params.output_dir}/{wildcards.comb}
         """
