@@ -10,9 +10,9 @@ rule RUN_COMBFOLD_ASSEMBLY:
         output_dir = os.path.join(OUTDIR, "rule_RUN_COMBFOLD_ASSEMBLY"),
         tmp_dir = lambda wc: os.path.join(OUTDIR, "rule_RUN_COMBFOLD_ASSEMBLY", f".{wc.comb}.tmp")
     log:
-        os.path.join(OUTPUT_DIR, "logs", "rule_RUN_COMBFOLD_ASSEMBLY", "{comb}.log"),
+        os.path.join(OUTDIR, "logs", "rule_RUN_COMBFOLD_ASSEMBLY", "{comb}.log"),
     benchmark:
-        os.path.join(OUTPUT_DIR, "benchmarks", "rule_RUN_COMBFOLD_ASSEMBLY", "{comb}.tsv")
+        os.path.join(OUTDIR, "benchmarks", "rule_RUN_COMBFOLD_ASSEMBLY", "{comb}.tsv")
     shell:
         """
         rm -rf {params.tmp_dir}
